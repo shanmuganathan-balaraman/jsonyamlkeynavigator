@@ -1,66 +1,33 @@
-# yml-json-key-finder README
+# JSONYAMLKeyNavigator
 
-This is the README for your extension "yml-json-key-finder". After writing up a brief description, we recommend including the following sections.
+Navigate and explore JSON and YAML files with ease. Quickly find nested keys, visualize key paths in the status bar, and copy them with a click.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Deep Key Search**: Instantly locate any nested key within your JSON or YAML files. Simply enter a dot-separated key path (e.g., `parent.child.key`) to jump directly to its location.
+- **Path Visualization**: Click on any key or value to see its complete hierarchical path displayed in the status bar, providing immediate context and understanding of its structure.
+- **Easy Path Copy**: Need to share or document a specific data path? Click on the status bar display to copy the full path to your clipboard with ease.
+- **Auto Line Highlighting**: When you search for a specific key, the corresponding line is automatically highlighted, guiding you directly to the relevant information.
 
-For example if there is an image subfolder under your extension project workspace:
+## Usage
 
-\!\[feature X\]\(images/feature-x.png\)
+1. **Deep Key Search**:
+   - Use the command `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac) to open the Command Palette.
+   - Type `Search Nested Key` and enter the key path in the format `parent.child.key`.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+2. **Path Visualization and Copy**:
+   - Click on any key or value in your JSON or YAML file.
+   - The full path of the key will be displayed in the status bar.
+   - Click on the status bar display to copy the path to your clipboard.
+
+## Installation
+
+Install JSONYAMLKeyNavigator from the Visual Studio Code Marketplace or by searching for `JSONYAMLKeyNavigator` in the VS Code extensions view.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+Visual Studio Code version 1.76.0 or higher.
 
-## Extension Settings
+## License
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
-# jsonyamlkeynavigator
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

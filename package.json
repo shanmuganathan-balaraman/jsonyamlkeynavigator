@@ -4,7 +4,7 @@
   "description": "Navigate and explore JSON and YAML files with ease. Quickly find nested keys, visualize key paths in the status bar, and copy them with a click.",
   "version": "0.0.1",
   "author": "Shan",
-  "publisher": "shanmuganathan-balaraman",
+  "publisher": "b-shan",
   "engines": {
     "vscode": "^1.76.0"
   },
@@ -18,7 +18,7 @@
     "commands": [
       {
         "command": "yml-json-key-finder.searchKey",
-        "title": "Search object Key"
+        "title": "Search Nested Key"
       }
     ]
   },
