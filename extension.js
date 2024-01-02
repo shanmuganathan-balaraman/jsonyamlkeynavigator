@@ -1,6 +1,13 @@
 const vscode = require('vscode');
 
+let statusBarItem;
+
 function activate(context) {
+
+    statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 100);
+    statusBarItem.command = 'yml-json-key-finder.copyPath';
+    statusBarItem.tooltip = 'Click to copy path'
+    context.subscriptions.push(statusBarItem);
 
     const cursorPositionDisposable = vscode.window.onDidChangeTextEditorSelection(event => {
         if (event.textEditor === vscode.window.activeTextEditor) {
@@ -29,6 +36,12 @@ function activate(context) {
     });
 
     context.subscriptions.push(cursorPositionDisposable);
+
+    let copyPathCommand = vscode.commands.registerCommand('yml-json-key-finder.copyPath', () => {
+        vscode.env.clipboard.writeText(statusBarItem.text.replace('Full Path: ', ''));
+        vscode.window.showInformationMessage('Path copied to clipboard');
+    });
+    context.subscriptions.push(copyPathCommand);
 }
 
 function findKeyPosition(editor, path) {
@@ -69,9 +82,11 @@ function showFullPathInStatusBar(editor) {
     const position = editor.selection.active;
     const lineText = editor.document.lineAt(position.line).text;
     const fullPath = calculateFullPath(lineText, position, editor.document);
-
     if (fullPath) {
-        vscode.window.setStatusBarMessage(`Full Path: ${fullPath}`, 5000);
+        statusBarItem.text = `Full Path: ${fullPath}`;
+        statusBarItem.show();
+    } else {
+        statusBarItem.hide();
     }
 }
 
