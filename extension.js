@@ -128,7 +128,7 @@ function getIndentation(lineText) {
 
 // Helper function to extract a key from a line
 function getKeyFromLine(lineText) {
-    let keyMatch = lineText.match(/"([^"]+)"\s*:/) || lineText.match(/(\w+)\s*:/);
+    let keyMatch = lineText.match(/"([^"]+)"\s*:/) || lineText.match(/([\w-]+)\s*:/);
     return keyMatch ? keyMatch[1] : null;
 }
 
