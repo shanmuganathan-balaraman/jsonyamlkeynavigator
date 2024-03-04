@@ -21,6 +21,10 @@
       {
         "command": "yml-json-key-finder.searchKey",
         "title": "Search Nested Key"
+      },
+      {
+        "command": "yml-json-key-finder.copyPath",
+        "title": "Copy Object Path"
       }
     ]
   },

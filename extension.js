@@ -35,13 +35,11 @@ function activate(context) {
         });
     });
 
-    context.subscriptions.push(cursorPositionDisposable);
-
     let copyPathCommand = vscode.commands.registerCommand('yml-json-key-finder.copyPath', () => {
         vscode.env.clipboard.writeText(statusBarItem.text.replace('Full Path: ', ''));
         vscode.window.showInformationMessage('Path copied to clipboard');
     });
-    context.subscriptions.push(copyPathCommand);
+    context.subscriptions.push(cursorPositionDisposable, findKeyCommand, copyPathCommand);
 }
 
 function findKeyPosition(editor, path) {
