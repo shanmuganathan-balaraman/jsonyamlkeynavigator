@@ -18,7 +18,7 @@ Navigate and explore JSON and YAML files with ease. Quickly find nested keys, vi
 2. **Path Visualization and Copy**:
    - Click on any key or value in your JSON or YAML file.
    - The full path of the key will be displayed in the status bar.
-   - Click on the status bar display to copy the path to your clipboard.
+   - Click on the status bar display to copy the path to your clipboard or you can use `Copy Object Path` command from command palette.
 
 ## Installation
 
