@@ -2,7 +2,7 @@
   "name": "jsonyamlkeynavigator",
   "displayName": "JSON/YAML key navigator",
   "description": "Navigate and explore JSON and YAML files with ease. Quickly find nested keys, visualize key paths in the status bar, and copy them with a click.",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "author": "Shan",
   "publisher": "b-shan",
   "engines": {
